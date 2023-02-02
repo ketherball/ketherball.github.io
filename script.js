@@ -179,7 +179,7 @@ function showConfirmPasswordError() {
     if (confirmPassword.validity.valueMissing) {
         confirmPasswordError.textContent = "*Retype password"
     } else if (confirmPassword.value !== password.value) {
-        confirmPasswordError.textContent = "*Password does not match"
+        confirmPasswordError.textContent = "*Password must match"
     }
     confirmPassword.setAttribute('style', 'border: solid 1px #900; border-radius: 2px; background: #fdd; padding: 2px')
 }
