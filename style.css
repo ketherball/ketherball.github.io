@@ -1,0 +1,149 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Background Half of Page */
+.background {
+    display: flex;
+    background: url(background.jpg) center;
+    flex: 1.25;
+    align-items: center;
+    justify-content: space-between;
+    background-size: cover;
+    flex-direction: column;
+}
+
+.logo-banner {
+    display: flex;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.395);
+    font-family: 'Norse-bold', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 60px;
+    height: 100px;
+    width: 100%;
+    padding-top: 10px;
+    margin-top: 153px;
+    justify-content: center;
+    align-items: center;
+}
+
+img {/* Odin Logo (not background image) */
+    height: 75px;
+}
+
+.photo-credit {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 12px;
+    color: white;
+}
+
+/* Form half of page */
+.content {
+    display: flex;
+    height: 100%;
+    flex: 1.75;
+    flex-direction: column;
+}
+
+/* Top third of "Form half" */
+.head {
+    display: flex;
+    background-color: rgb(244, 244, 244);
+    color: rgb(40, 40, 40);
+    flex: 1;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.05rem;
+    font-weight: bold;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 20px;
+    justify-content: end;
+    flex-direction: column;
+}
+
+#head-content {
+    max-width: 500px;
+}
+
+/* Actual Form */
+.form {
+    flex: 2;
+}
+
+.form-box {
+    color: dimgray;
+    padding: 30px 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 9px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    box-shadow: 0px 3px 7px rgba(0,0,0,0.2);
+}
+
+.label-align {
+    display: flex;
+    flex-direction: column;
+    max-width: 175px;
+    height: 53px
+}
+
+.input-align {
+    display: flex;
+}
+
+input, label {
+    margin-left: 30px;
+}
+
+input:focus {
+    box-shadow: 0px 3px 7px rgba(0,0,0,0.2);
+}
+
+.error {/* Handles error messages for form */
+    width: 70%;
+    margin-left: 30px;
+}
+
+/* Bottom third of "Form half" of page 
+(includes "Create Account" button) */
+.footer {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 20px;
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+button {
+    background-color: darkolivegreen;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    font-size: 11.5px;
+    font-weight: bold;
+    padding: 7px 30px;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0px 3px 7px rgba(0,0,0,0.2);
+}
+
+button:hover {
+    transition-duration: 0.4s;
+    background-color: rgb(108, 129, 73);
+}
+
+.footer-text {
+    font-size: 13px;
+}
+
+#log-in {
+    text-decoration: none;
+    color: darkolivegreen;
+}
