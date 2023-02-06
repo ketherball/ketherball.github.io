@@ -328,8 +328,9 @@ body {
 
 /* Flexbox */
 .dashboard-flexbox {
-    margin: 7.5px 3% 0 2%;
-    overflow: hidden;
+    margin: 7.5px 3% 33px 2%;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 .dashboard-flexbox>h4 {
