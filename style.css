@@ -1,0 +1,206 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Open Sans';
+}
+
+body {
+    margin: 0;
+    background-color: whitesmoke;
+}
+
+#heading {
+    position: sticky;
+    top: 0;
+    margin: 0;
+    padding-top: 25px;
+    padding-bottom: 10px;
+    background-color: white;
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 300;
+    box-shadow: 0px 1px 7px rgba(0, 0, 0, 0.538);
+}
+
+#heading>span {
+    color: rgb(2, 94, 113);
+}
+
+/* Books Dashboard Display */
+
+.dashboard-grid {
+    display: grid;
+    grid-gap: 2em;
+    grid-template-columns: repeat(auto-fit, 300px);
+    justify-content: center;
+    margin: 1.5em 0 3em 0;
+}
+
+.book-ticket {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-left: solid 5px rgb(2, 94, 113);
+    border-radius: 3px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.348);
+    height: 200px;
+    margin-bottom: 15px;
+}
+
+.book-info>p {
+    color: rgb(58, 58, 58);
+    font-size: .85rem;
+    margin: 15px 0 10px 10px;
+    overflow: scroll;
+    white-space: nowrap;
+}
+
+#title {
+    color: black;
+    font-size: 1.3rem;
+    border-bottom: solid .5px gray;
+}
+
+#author {
+    font-size: 1rem;
+}
+
+.book-ticket-buttons{
+    display: flex;
+    justify-content: center;
+}
+
+.book-ticket-buttons>button {
+    color: white;
+    background-color: rgb(2, 94, 113);
+    border: solid 0px;
+    border-radius: 3px;
+    padding: 5px 10px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.book-ticket-buttons>button:hover {
+    background-color: rgb(2, 129, 154);
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    background-color: white;
+    height: 7%;
+    width: 100%;
+    box-shadow: 0px 1px 7px rgba(0, 0, 0, 0.538);
+}
+
+.footer>span {
+    font-size: 12px;
+}
+
+.footer>em {
+    color: rgb(2, 94, 113);
+    font-size: 12px;
+    cursor: pointer;
+}
+
+/* New Book Form System Design */
+#new-book-button {
+    margin: 12px;
+    color: white;
+    background-color: rgb(2, 94, 113);
+    border: solid 0px;
+    border-radius: 3px;
+    padding: 5px 10px;
+}
+
+#new-book-button:hover {
+    background-color: rgb(2, 129, 154);
+    cursor: pointer;
+}
+
+.new-book-form-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.343);
+}
+
+.new-book-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    width: 250px;
+    height: 250px;
+    padding: 10px;
+    border-left: solid 5px rgb(2, 94, 113);
+    border-radius: 2px;
+}
+
+label>span {
+    display: inline-block;
+    color: rgb(187, 0, 0);
+    margin-left: 5px;
+    font-size: 10px;
+}
+
+#new-book-form-button {
+    color: white;
+    background-color: rgb(2, 94, 113);
+    border: solid 0px;
+    border-radius: 3px;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+#new-book-form-button:hover {
+    background-color: rgb(2, 129, 154);
+    cursor: pointer;
+}
+
+.new-book-form>img {
+    position: relative;
+    bottom: 18px;
+    left: 219px;
+    height: 14px;
+    width: 14px;
+    cursor: pointer
+}
+
+.remove-book-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    width: 250px;
+    height: auto;
+    padding: 10px;
+    border-left: solid 5px rgb(2, 94, 113);
+    border-radius: 2px;
+}
+
+.remove-book-form>img {
+    position: relative;
+    bottom: 8.2px;
+    left: 219px;
+    height: 14px;
+    width: 14px;
+    cursor: pointer
+}
+
+#remove-book-form-head {
+    font-weight: 500;
+    margin-top: 2px;
+    border-bottom: solid .5px rgb(58, 58, 58);
+}
+
+#remove-book-form-body {
+    color: rgb(84, 83, 83);
+    font-size: .85rem;
+    margin-top: -5px;
+}
