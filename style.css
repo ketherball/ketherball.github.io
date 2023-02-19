@@ -196,7 +196,7 @@ label>span {
 #remove-book-form-head {
     font-weight: 500;
     margin-top: 2px;
-    border-bottom: solid .5px rgb(58, 58, 58);
+    border-bottom: solid .1px rgb(58, 58, 58);
 }
 
 #remove-book-form-body {

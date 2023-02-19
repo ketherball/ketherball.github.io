@@ -1,41 +1,45 @@
+function elementCreator(type, attributeType, attribute, text = '') {
+    let el = document.createElement(type)
+    el.setAttribute(attributeType, attribute)
+    el.textContent = text
+    return el
+}
+
+function elementCreator2(type, text) {
+    let el = document.createElement(type)
+    el.textContent = text
+    return el
+}
+
 //Book Tickets
 const bookDashboard = document.querySelector(".dashboard-grid")
 
-let bookTicket = document.createElement('div')
-bookTicket.setAttribute('class', 'book-ticket')
+let bookTicket = elementCreator('div', 'class', 'book-ticket')
 
-let bookInfo = document.createElement('div')
-bookInfo.setAttribute('class', 'book-info')
+let bookInfo = elementCreator('div', 'class', 'book-info')
 
-let bookTicketTitle = document.createElement('p')
-bookTicketTitle.setAttribute('id', 'title')
+let bookTicketTitle = elementCreator('p', 'id', 'title')
 
-let bookTicketAuthor = document.createElement('p')
-bookTicketAuthor.setAttribute('id', 'author')
+let bookTicketAuthor = elementCreator('p', 'id', 'author')
 
-let bookTicketPages = document.createElement('p')
-bookTicketPages.setAttribute('id', 'pages')
+let bookTicketPages = elementCreator('p', 'id', 'pages')
 
-let bookTicketRead = document.createElement('p')
-bookTicketRead.setAttribute('id', 'read')
+let bookTicketRead = elementCreator('p', 'id', 'read')
 
-let bookTicketButtonContainer = document.createElement('div')
-bookTicketButtonContainer.setAttribute('class', 'book-ticket-buttons')
+let bookTicketButtoremoveBookForm = elementCreator('div', 'class', 'book-ticket-buttons')
 
-let bookTicketEditButton = document.createElement('button')
-bookTicketEditButton.textContent = 'Edit'
+let bookTicketEditButton = elementCreator2('button', 'Edit')
 
-let bookTicketRemoveButton = document.createElement('button')
-bookTicketRemoveButton.textContent = 'Remove'
+let bookTicketRemoveButton = elementCreator2('button', 'Remove')
 
 bookTicket.appendChild(bookInfo)
 bookInfo.appendChild(bookTicketTitle)
 bookInfo.appendChild(bookTicketAuthor)
 bookInfo.appendChild(bookTicketPages)
 bookInfo.appendChild(bookTicketRead)
-bookTicket.appendChild(bookTicketButtonContainer)
-bookTicketButtonContainer.appendChild(bookTicketEditButton)
-bookTicketButtonContainer.appendChild(bookTicketRemoveButton)
+bookTicket.appendChild(bookTicketButtoremoveBookForm)
+bookTicketButtoremoveBookForm.appendChild(bookTicketEditButton)
+bookTicketButtoremoveBookForm.appendChild(bookTicketRemoveButton)
 
 function resetDashboard() {
     let bookTicket = document.querySelectorAll('.book-ticket')
@@ -47,50 +51,39 @@ function resetDashboard() {
 //Book Form
 let body = document.querySelector('body')
 
-let bookFormBackground = document.createElement('div')
-bookFormBackground.setAttribute('class', 'new-book-form-background')
+let bookFormBackground = elementCreator('div', 'class', 'new-book-form-background')
 
-let bookForm = document.createElement('div')
-bookForm.setAttribute('class', 'new-book-form')
+let bookForm = elementCreator('div', 'class', 'new-book-form')
 
 let bookFormCloseout = document.createElement('img')
 bookFormCloseout.src = 'icons/closeout-darkgray.svg'
 
 bookFormCloseout.addEventListener('mouseenter', () => {
     bookFormCloseout.src = 'icons/closeout-black.svg'
-    //bookFormCloseout.setAttribute('style',
-    //'position: relative; top: -17px; right: -113px; height: 14px; cursor: pointer')
 })
 
 bookFormCloseout.addEventListener('mouseleave', () => {
     bookFormCloseout.src = 'icons/closeout-darkgray.svg'
-    //bookFormCloseout.setAttribute('style',
-    //'position: relative; top: -17px; right: -113px; height: 14px; cursor: pointer')
 })
 
 bookFormCloseout.addEventListener('click', () => {
     resetBookForm()
     bookFormCloseout.src = 'icons/closeout-darkgray.svg'
-    //bookFormCloseout.setAttribute('style',
-    //'position: relative; top: -17px; right: -113px; height: 14px; cursor: pointer')
 })
     //Form Input
-let bookFormTitleLabel = document.createElement('label')
-bookFormTitleLabel.textContent = 'Title'
+let bookFormTitleLabel = elementCreator2('label', 'Title')
 
 let bookFormTitleInput = document.createElement('input')
     let titleErrorMessage = document.createElement('span')
     inputValidation(bookFormTitleInput, titleErrorMessage)
 
-let bookFormAuthorLabel = document.createElement('label')
-bookFormAuthorLabel.textContent = 'Author'
+let bookFormAuthorLabel = elementCreator2('label', 'Author')
 
 let bookFormAuthorInput = document.createElement('input')
     let authorErrorMessage = document.createElement('span')
     inputValidation(bookFormAuthorInput, authorErrorMessage)
 
-let bookFormPagesLabel = document.createElement('label')
-    bookFormPagesLabel.textContent = 'Pages'
+let bookFormPagesLabel = elementCreator2('label', 'Pages')
 
 let bookFormPagesInput = document.createElement('input')
     let pagesErrorMessage = document.createElement('span')
@@ -107,12 +100,9 @@ let bookFormPagesInput = document.createElement('input')
     }
     })
 
-let bookFormReadContainer = document.createElement('div')
-bookFormReadContainer.setAttribute('style',
-'display: inline-block')
+let bookFormReadContainer = elementCreator('div', 'style', 'display: inline-block')
 
-let bookFormReadLabel = document.createElement('label')
-bookFormReadLabel.textContent = 'Read Status'
+let bookFormReadLabel = elementCreator2('label', 'Read Status')
 
 let bookFormReadInput = document.createElement('input')
 bookFormReadInput.type = 'checkbox'
@@ -124,25 +114,23 @@ if (bookFormReadInput.checked == false) {
     bookFormReadInput.value = false
 }
 
-let bookFormButton = document.createElement('button')
-bookFormButton.textContent = 'Submit'
-bookFormButton.setAttribute('id', 'new-book-form-button')
+let bookFormButton = elementCreator('button', 'id', 'new-book-form-button', 'Submit')
 
-    bookFormBackground.appendChild(bookForm)
-    bookForm.appendChild(bookFormCloseout)
-    bookForm.appendChild(bookFormTitleLabel)
-    bookFormTitleLabel.appendChild(titleErrorMessage)
-    bookForm.appendChild(bookFormTitleInput)
-    bookForm.appendChild(bookFormAuthorLabel)
-    bookFormAuthorLabel.appendChild(authorErrorMessage)
-    bookForm.appendChild(bookFormAuthorInput)
-    bookForm.appendChild(bookFormPagesLabel)
-    bookFormPagesLabel.appendChild(pagesErrorMessage)
-    bookForm.appendChild(bookFormPagesInput)
-    bookForm.appendChild(bookFormReadContainer)
-    bookFormReadContainer.appendChild(bookFormReadLabel)
-    bookFormReadContainer.appendChild(bookFormReadInput)
-    bookForm.appendChild(bookFormButton)
+bookFormBackground.appendChild(bookForm)
+bookForm.appendChild(bookFormCloseout)
+bookForm.appendChild(bookFormTitleLabel)
+bookFormTitleLabel.appendChild(titleErrorMessage)
+bookForm.appendChild(bookFormTitleInput)
+bookForm.appendChild(bookFormAuthorLabel)
+bookFormAuthorLabel.appendChild(authorErrorMessage)
+bookForm.appendChild(bookFormAuthorInput)
+bookForm.appendChild(bookFormPagesLabel)
+bookFormPagesLabel.appendChild(pagesErrorMessage)
+bookForm.appendChild(bookFormPagesInput)
+bookForm.appendChild(bookFormReadContainer)
+bookFormReadContainer.appendChild(bookFormReadLabel)
+bookFormReadContainer.appendChild(bookFormReadInput)
+bookForm.appendChild(bookFormButton)
 
 function resetBookForm() {
     body.removeChild(bookFormBackground)
@@ -206,8 +194,8 @@ bookFormButton.addEventListener('click', () => {
     }
 })
 
-//Form Validation Errors on Submit
-function formValidation() {
+//Form Validation Errors
+function formValidation() {//on Submit
     if (bookFormTitleInput.value == '') {
         titleErrorMessage.textContent = '*Field required'
     }
@@ -227,7 +215,7 @@ function formValidation() {
     }
 }
 
-function inputValidation(input, error) {
+function inputValidation(input, error) {//during Input, real-time
     input.addEventListener('input', () => {
         if (! input.value == '') {
             error.textContent = ''
@@ -272,13 +260,13 @@ function displayLibrary(array) {
 }
 
     //Temporary Books
-let book1 = new Book('The Archetypes & the Collective Unconscious', 'C. G. Jung', 451, true)
+let book4 = new Book('The Archetypes & the Collective Unconscious', 'C. G. Jung', 451, true)
 
-let book2 = new Book('The Doors of Perception', 'Aldous Huxley', 1185, false)
+let book2 = new Book('The Doors of Perception', 'Aldous Huxley', 185, false)
 
 let book3 = new Book("Man's Search for Meaning", 'Viktor Frankyl', 165, true)
 
-let book4 = new Book('Crime & Punishment', 'Fyodor Dostoevsky', 565, true)
+let book1 = new Book('Crime & Punishment', 'Fyodor Dostoevsky', 565, true)
 
 let book5 = new Book('Liber Null & Psychonaut', 'Peter J. Carrol', 196, true)
 
@@ -384,27 +372,58 @@ function activateEditButton() {
 }   
 
 //Remove Book Ticket
+let removeBookFormBackground = elementCreator('div', 'class', 'new-book-form-background')
+
+let removeBookForm = elementCreator('div', 'class', 'remove-book-form')
+
+let removeBookFormHead = elementCreator('p', 'id', 'remove-book-form-head')
+
+let removeBookFormBody = elementCreator('p', 'id', 'remove-book-form-body', 'Deleted books cannot be recovered.')
+
+let removeBookFormButtonContainer = elementCreator('div', 'class', 'book-ticket-buttons')
+
+let confirmRemoveButton = elementCreator2('button', 'Yes')
+
+let denyRemoveButton = elementCreator2('button', 'No') 
+
+removeBookFormBackground.appendChild(removeBookForm)
+removeBookForm.appendChild(removeBookFormHead)
+removeBookForm.appendChild(removeBookFormBody)
+removeBookForm.appendChild(removeBookFormButtonContainer)
+removeBookFormButtonContainer.appendChild(confirmRemoveButton)
+removeBookFormButtonContainer.appendChild(denyRemoveButton)
+
 function activateRemoveButton() {
     for (let i = 1; i < myLibrary.length + 1; i++) {
         document.querySelector(`.remove-${i}`).
         addEventListener('click', () => {
+            body.appendChild(removeBookFormBackground)
             let title = document.querySelector(`.title-${i}`).textContent
+            removeBookFormHead.textContent = `Are you sure you want to remove ${title}?`
             let author = document.querySelector(`.author-${i}`).textContent
             let pages = document.querySelector(`.pages-${i}`).textContent.replace(/\D/g,'')
-            for (i = 0; i < myLibrary.length; i++) {
-                if (myLibrary[i].title == title && 
-                    myLibrary[i].author == author &&
-                    myLibrary[i].pages == parseInt(pages)) {
-                        myLibrary.splice(i, 1)
-                        console.log(`Removed ${title}`)
-                        console.table(myLibrary)
-                        resetDashboard()
-                        displayLibrary(myLibrary)
-                        return
-                    }
-            }
-            //resetDashboard()
-            //displayLibrary(myLibrary)
+            confirmRemoveButton.setAttribute('id', `confirm-${i}`)
+            denyRemoveButton.setAttribute('id', `cancel-${i}`)
+            //
+            confirmRemoveButton.addEventListener('click', () => {
+                for (i = 0; i < myLibrary.length; i++) {
+                    if (myLibrary[i].title == title && 
+                        myLibrary[i].author == author &&
+                        myLibrary[i].pages == parseInt(pages)) {
+                            myLibrary.splice(i, 1)
+                            console.log(`Removed ${title}`)
+                            console.table(myLibrary)
+                            body.removeChild(removeBookFormBackground)
+                            resetDashboard()
+                            displayLibrary(myLibrary)
+                            return
+                        }
+                }
+            })
+            //
+            denyRemoveButton.addEventListener('click', () => {
+                body.removeChild(removeBookFormBackground)
+            })
         })
     }
 }
