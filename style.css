@@ -165,8 +165,8 @@ label>span {
 
 .new-book-form>img {
     position: relative;
-    bottom: 18px;
-    left: 219px;
+    bottom: 1rem;
+    left: 13.6rem;
     height: 14px;
     width: 14px;
     cursor: pointer
@@ -182,15 +182,6 @@ label>span {
     padding: 10px;
     border-left: solid 5px rgb(2, 94, 113);
     border-radius: 2px;
-}
-
-.remove-book-form>img {
-    position: relative;
-    bottom: 8.2px;
-    left: 219px;
-    height: 14px;
-    width: 14px;
-    cursor: pointer
 }
 
 #remove-book-form-head {
