@@ -1,0 +1,149 @@
+* {
+    box-sizing: 0;
+}
+
+@font-face {
+    font-family: 'NothingYouCouldDo';
+    src: url('../fonts/NothingYouCouldDo-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'BebasNeue';
+    src: url('../fonts/BebasNeue-Regular.ttf');
+}
+
+body {
+    margin: 0;
+}
+
+#carousel-container {
+    height: 275px;
+}
+
+@media all and (min-width: 1250px) {
+    #carousel-container {
+        height: 350px        
+    }
+}
+
+#carousel-slide-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.503);
+    background-image: url('../images/menu-carousel-lg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center 75%;
+}
+
+#carousel-slide-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.503);
+    background-image: url('../images/about-us-carousel.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center 75%;
+}
+
+#carousel-text-banner {
+    background-color: rgba(0, 0, 0, 0.312);
+    width: 100%;
+}
+
+#carousel-text {
+    color: white;
+    font-family: 'NothingYouCouldDo';
+    font-size: 2.3rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+#order-now-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: .5px solid rgb(96, 96, 96);
+}
+#order-now-text {
+    margin-bottom: 7px;
+    color: rgb(117, 10, 10);
+    font-family: 'BebasNeue';
+    font-size: 2rem;
+    text-align: center;
+}
+
+#order-now-button {
+    padding: 5px 25px;
+    font-family: 'BebasNeue';
+    font-size: 1.3rem;
+    color: white;
+    background-color: rgb(174, 136, 9);
+    border: 0;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+#order-now-button:hover {
+    background-color: rgb(119, 96, 20);
+}
+
+#about-us-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+#about-us-head {
+    color: rgb(117, 10, 10);
+    font-family: 'NothingYouCouldDo';
+    font-size: 3rem;
+}
+
+#about-us-body {
+    font-family: 'NothingYouCouldDo';
+    text-align: center;
+    padding: 0 10px;
+    margin-bottom: 10px;
+}
+
+#about-us-button {
+    padding: 5px 25px;
+    font-family: 'BebasNeue';
+    font-size: 1.3rem;
+    color: white;
+    background-color: rgb(174, 136, 9);
+    border: 0;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+#about-us-button:hover {
+    background-color: rgb(119, 96, 20);
+}
+
+#footer-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(117, 10, 10);
+    padding: 20px 0;
+    height: 20vh;
+}
+
+#footer-text {
+    font-family: 'Open Sans';
+    color: white;
+    font-size: .7rem;
+}

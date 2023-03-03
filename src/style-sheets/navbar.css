@@ -1,0 +1,113 @@
+/* Since every page has a navbar
+navbar was given its own style sheet 
+to reduce code */
+
+#navbar {
+    position: sticky;
+    top: 0;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    background-color: rgb(117, 10, 10);
+}
+
+#navbar-hamburger-menu {
+    display: none;
+}
+
+#navbar-dropdown-menu {
+    display: none;
+}
+
+#navbar-menu {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'BebasNeue';
+}
+#navbar-menu-home,
+#navbar-menu-menu,
+#navbar-menu-about-us {
+    font-size: 1.2rem;
+    margin-left: 5px;
+    padding: 5px 5px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+#navbar-menu-home:hover,
+#navbar-menu-menu:hover,
+#navbar-menu-about-us:hover {
+    background-color: rgb(87, 12, 12);
+}
+#navbar-restaurant-name {
+    margin-left: -80px;
+    font-size: 2rem;
+    font-family: 'NothingYouCouldDo';
+    cursor: pointer;
+}
+
+#navbar-shopping-bag {
+    padding: 5px;
+    margin-right: 10px;
+    height: 35px;
+    border-radius: 2px;
+}
+
+#navbar-shopping-bag:hover {
+    background-color: rgb(87, 12, 12);
+    cursor: pointer;
+}
+
+@media all and (max-width: 440px) {
+    #navbar-menu {
+        display: none;
+    }
+    #navbar-hamburger-menu {
+        display: inherit;
+        padding: 5px;
+        margin-left: 10px;
+        height: 35px;
+        border-radius: 2px;
+    }
+    #close-dropdown {
+        display: inherit;
+        background-color: rgb(87, 12, 12);
+        padding: 5px;
+        margin-left: 10px;
+        height: 35px;
+        border-radius: 2px;
+    }
+    #navbar-hamburger-menu:hover {
+        background-color: rgb(87, 12, 12);
+        cursor: pointer;
+    }
+    #navbar-restaurant-name {
+        font-size: 2rem;
+        font-family: 'NothingYouCouldDo';
+        margin: 0;
+        cursor: pointer;
+    }
+    #navbar-dropdown-menu {
+        position: sticky;
+        top: 62px;
+        display: hidden !important;
+        text-align: center;
+        font-family: 'BebasNeue';
+        color: white;
+        background-color: rgb(117, 10, 10);
+        border-top: .5px solid rgb(87, 12, 12);
+        border-bottom: .5px solid rgb(87, 12, 12);
+    }
+    #navbar-dropdown-menu-home,
+    #navbar-dropdown-menu-menu,
+    #navbar-dropdown-menu-about-us {
+        font-size: 1.7rem;
+        cursor: pointer;
+    }
+    #navbar-dropdown-menu-home:hover,
+    #navbar-dropdown-menu-menu:hover,
+    #navbar-dropdown-menu-about-us:hover {
+        background-color: rgb(87, 12, 12);
+    }
+}
