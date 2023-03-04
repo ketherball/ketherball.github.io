@@ -1070,15 +1070,15 @@ const imageSection = (0,_global_functions__WEBPACK_IMPORTED_MODULE_0__.createHtm
 const menuSection = (0,_global_functions__WEBPACK_IMPORTED_MODULE_0__.createHtml)(`
     <div id="menu-section">
         <div id="menu-burrito">
-            <img id="burrito-img" src="../src/images/burrito.jpg" alt="burrito">
+            <img id="burrito-img" src="./src/images/burrito.jpg" alt="burrito">
             <div id="burrito-text">Burrito</div>
         </div>
         <div id="menu-burrito-bowl">
-            <img id="burrito-bowl-img" src="../src/images/burrito-bowl.jpg" alt="burrito bowl">
+            <img id="burrito-bowl-img" src="./src/images/burrito-bowl.jpg" alt="burrito bowl">
             <div id="burrito-bowl-text">Burrito Bowl</div>
         </div>
         <div id="menu-tacos">
-            <img id="tacos-img" src="../src/images/tacos.jpg" alt="tacos">
+            <img id="tacos-img" src="./src/images/tacos.jpg" alt="tacos">
             <div id="tacos-text">Traditional Tacos</div>
         </div>
     </div>
@@ -1180,7 +1180,7 @@ const navbar = (0,_global_functions__WEBPACK_IMPORTED_MODULE_0__.createHtml)(`
             <div id="navbar-menu-menu">Menu</div>
             <div id="navbar-menu-about-us">About Us</div>
         </div>
-        <img id="navbar-hamburger-menu" src="../src/icons/menu.svg" alt="menu">
+        <img id="navbar-hamburger-menu" src="./src/icons/menu.svg" alt="menu">
         <div id="navbar-restaurant-name">La Mesa</div>
         <div id="navbar-shopping-bag">
             <div id="shopping-bag-item-total"></div>
